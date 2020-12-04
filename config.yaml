@@ -1,0 +1,87 @@
+baseURL: /
+title: Persian
+module:
+  imports:
+   - path: github.com/themefisher/persian-hugo
+     mounts:
+     - source: archetypes
+       target: archetypes
+     - source: layouts
+       target: layouts
+     - source: assets
+       target: assets
+     - source: static
+       target: static
+     - source: exampleSite/static/images
+       target: static/images
+languageName: En
+languageCode: en-us
+paginate: "5"
+disqusShortname: ""
+outputs:
+  home:
+    - HTML
+    - RSS
+    - json
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  plugins:
+    css:
+      - link: plugins/bootstrap/bootstrap.min.css
+      - link: plugins/themify-icons/themify-icons.css
+    js:
+      - link: plugins/jQuery/jquery.min.js
+      - link: plugins/bootstrap/bootstrap.min.js
+      - link: plugins/search/fuse.min.js
+      - link: plugins/search/mark.js
+      - link: plugins/search/search.js
+  logo: images/logo.png
+  description: This is meta description
+  author: Themefisher
+  search: true
+  contact_form_action: "#"
+  copyright: >-
+    Designed By [Themefisher](https://themefisher.com/) & Developed By
+    [Gethugothemes](https://gethugothemes.com/)
+  preloader:
+    enable: true
+    preloader: ""
+  cookies:
+    enable: true
+    expire_days: 2
+  social:
+    - title: facebook
+      icon: ti-facebook
+      link: "#"
+    - title: twitter
+      icon: ti-twitter-alt
+      link: "#"
+    - title: instagram
+      icon: ti-instagram
+      link: "#"
+    - title: github
+      icon: ti-github
+      link: "#"
+    - title: linkedin
+      icon: ti-linkedin
+      link: "#"
+menu:
+  main:
+    - name: Home
+      URL: /
+      weight: 1
+    - name: About
+      URL: about
+      weight: 2
+    - name: Category
+      URL: categories/nature/
+      weight: 3
+    - name: Contact
+      URL: contact
+      weight: 4
+    - name: Privacy Policy
+      URL: privacy-policy
+      weight: 5
